@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
 import Spline from '@splinetool/react-spline'
 
 export default function HeroSpline() {
   return (
-    <section className="relative w-full h-[80vh] sm:h-[85vh] lg:h-[92vh] bg-[#0b0b0d]">
+    <section className="relative mt-16 w-full h-[80vh] sm:h-[85vh] lg:h-[92vh] bg-[#0b0b0d]">
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/cEecEwR6Ehj4iT8T/scene.splinecode" />
       </div>
@@ -18,8 +19,8 @@ export default function HeroSpline() {
             Strategy, design, and advanced web experiences for brand, product, and content — crafted with intention.
           </p>
           <div className="mt-8 flex items-center gap-3">
-            <a href="/work" className="px-5 py-2.5 rounded-md bg-[#FF5A3C] hover:bg-[#ff6a50] text-white font-semibold transition-colors">See our work</a>
-            <a href="/contact" className="px-5 py-2.5 rounded-md border border-white/20 hover:border-white/40 text-white/90 hover:text-white transition-colors">Start a project</a>
+            <Link to="/work" className="px-5 py-2.5 rounded-md bg-[#FF5A3C] hover:bg-[#ff6a50] text-white font-semibold transition-colors">See our work</Link>
+            <Link to="/contact" className="px-5 py-2.5 rounded-md border border-white/20 hover:border-white/40 text-white/90 hover:text-white transition-colors">Start a project</Link>
           </div>
         </div>
       </div>
