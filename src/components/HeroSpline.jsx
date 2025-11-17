@@ -8,7 +8,7 @@ export default function HeroSpline() {
         <Spline scene="https://prod.spline.design/cEecEwR6Ehj4iT8T/scene.splinecode" />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#0b0b0d] z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#0b0b0d] z-10 supports-[backdrop-filter]:backdrop-blur-[1px]" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-20 sm:pb-24">
         <div className="text-white max-w-3xl">
@@ -18,9 +18,13 @@ export default function HeroSpline() {
           <p className="mt-4 text-white/80 text-lg max-w-2xl">
             Strategy, design, and advanced web experiences for brand, product, and content — crafted with intention.
           </p>
-          <div className="mt-8 flex items-center gap-3">
-            <Link to="/work" className="px-5 py-2.5 rounded-md bg-[#FF5A3C] hover:bg-[#ff6a50] text-white font-semibold transition-colors">See our work</Link>
-            <Link to="/contact" className="px-5 py-2.5 rounded-md border border-white/20 hover:border-white/40 text-white/90 hover:text-white transition-colors">Start a project</Link>
+
+          {/* Button group with subtle background to prevent underlying scene text from showing through */}
+          <div className="mt-8 max-w-fit rounded-lg bg-black/40 supports-[backdrop-filter]:backdrop-blur-md border border-white/10 p-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <Link to="/work" className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-md bg-[#FF5A3C] hover:bg-[#ff6a50] text-white font-semibold transition-colors">See our work</Link>
+              <Link to="/contact" className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-md border border-white/20 hover:border-white/40 text-white/90 hover:text-white transition-colors bg-white/0 hover:bg-white/5">Start a project</Link>
+            </div>
           </div>
         </div>
       </div>
