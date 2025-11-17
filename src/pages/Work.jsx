@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import WorkCard from '../components/WorkCard'
 
 const projects = Array.from({length:9}).map((_,i)=>({
   id: i+1,
@@ -18,15 +19,7 @@ export default function Work(){
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map(p => (
-            <a key={p.id} href={`/work/${p.id}`} className="group block bg-white/5 border border-white/10 rounded-xl overflow-hidden">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="p-4">
-                <div className="text-sm text-white/60">{p.tag}</div>
-                <div className="text-lg font-semibold">{p.title}</div>
-              </div>
-            </a>
+            <WorkCard key={p.id} project={p} />
           ))}
         </div>
       </main>
